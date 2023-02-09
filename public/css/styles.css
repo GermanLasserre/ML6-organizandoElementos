@@ -134,11 +134,16 @@ main section article.seccion__productos--tarjeta {
 main section article.seccion__productos--tarjeta:hover {
     box-shadow: -5px 5px 10px var(--gris-oscuro);
     border: 2px solid black;
-
 }
 
 .seccion__productos--tarjeta-descripcion {
     display: none;
+    margin: 15px;
+    padding-top: 15px;
+}
+
+main section article.seccion__productos--tarjeta:hover div.seccion__productos--tarjeta-descripcion {
+    display: block;
 }
 
 .precioYdescuento {
@@ -234,10 +239,8 @@ footer span {
         display: none;
     }
 
-    .seccion__productos--tarjeta-descripcion:hover {
-        display: block;
+    .seccion__productos--tarjeta-descripcion {
         border-top: 1px solid var(--gris-claro);
-        padding: 15px;
     }
 }
 
@@ -309,8 +312,7 @@ footer span {
         flex-direction: row;
     }
 
-    .seccion__productos--tarjeta-descripcion:hover {
-        display: block;
+    .seccion__productos--tarjeta-descripcion {
         border-top: 2px solid var(--gris-claro);        
     }
 }
@@ -365,8 +367,7 @@ footer span {
         border: 0.25rem solid var(--gris-claro);
     }
 
-    .seccion__productos--tarjeta-descripcion:hover {
-        display: block;
+    .seccion__productos--tarjeta-descripcion {
         border-top: 3px solid var(--gris-claro);
     }
 
