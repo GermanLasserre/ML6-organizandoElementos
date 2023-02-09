@@ -59,30 +59,17 @@ header {
     padding: 25px 0;
 }
 
-.logoYbusqueda {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
 header div.logo img {
     width: 50%;
     margin-left: 25px;
+    padding: 0 5px;
 }
 
 header div.busqueda {
     width: 50%;
     height: 2rem;
     display: flex;
-}
-
-.cuotas {
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    padding: 0 5px;
 }
 
 header section button {
@@ -91,17 +78,17 @@ header section button {
     width: 2rem;
 }
 
-header p {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-header nav.listas {
+.logoYbusqueda {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 0 5px;
 }
 
-header nav ul li a {
-    font-size: var(--parrafos);
+.cuotas {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
 }
 
 header div.burger-menu {
@@ -152,7 +139,22 @@ main section article.seccion__productos--tarjeta:hover {
 div.seccion__productos--tarjeta-descripcion {
     border-top: 1px solid var(--gris-claro);
     padding: 15px;
-    display: none; 
+  /*  display: none; */
+}
+
+.precioYdescuento {
+    display: flex;
+    margin: 2px 0px;
+}
+
+p.price {
+    margin-right: 5px;
+    width: 30%;
+}
+
+p.off {
+    color: var(--verde);
+    width: 70%;
 }
 
 main section article i.fa-truck {
@@ -175,21 +177,6 @@ main section article i.fa-truck:hover {
     transition: all 1.5s ease;
 }
 
-.precioYdescuento {
-    display: flex;
-    margin: 2px 0px;
-}
-
-p.price {
-    margin-right: 5px;
-    width: 30%;
-}
-
-p.off {
-    color: var(--verde);
-    width: 70%;
-}
-
 /*Footer*/
 
 footer {
@@ -200,7 +187,7 @@ footer {
 
 footer section {
     width: 90%;
-    margin:0px auto;
+    margin: 0px auto;
 }
 
 footer section article {
@@ -217,7 +204,7 @@ footer section article p {
 }
 
 footer section article i {
-    font-size:  2em;
+    font-size: 2em;
     color: var(--celeste);
     margin-bottom: 10px;
 }
@@ -244,7 +231,7 @@ footer span {
         margin: auto;
     }
 
-    .listas{
+    .listas {
         display: none;
     }
 }
@@ -256,19 +243,22 @@ footer span {
     header div.logo img {
         min-width: 71%;
         max-width: 80%;
-    }   
+    }
 
-    .upheader{
+    .upheader {
         display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
 
     .listas {
         display: flex;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: var(--parrafos);
+        margin-top: 10px;
     }
 
     .listaSuperior {
@@ -323,10 +313,10 @@ footer span {
 
 @media (min-width:769px) {
 
-    .upheader{
+    .upheader {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         margin: auto;
     }
 
@@ -335,9 +325,11 @@ footer span {
         max-width: 85%;
     }
 
-    header nav.listas {
+    .listas {
         display: flex;
-        justify-content: space-evenly;
+        justify-content:space-evenly;
+        align-items: center;
+        margin-top: 5px;
     }
 
     .listaSuperior {
@@ -367,7 +359,7 @@ footer span {
         border: 0.25rem solid var(--gris-claro);
     }
 
-   main section article.seccion__productos--tarjeta-descripcion {
+    main section article.seccion__productos--tarjeta-descripcion {
         border-top: 3px solid var(--gris-claro);
     }
 
