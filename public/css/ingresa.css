@@ -19,7 +19,7 @@ body div.form-container form div.input-container input {
     margin: 20px 0 50px;
     border-radius: 5px;
     border: none;
-    box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 input ::placeholder {
@@ -29,17 +29,18 @@ input ::placeholder {
 body div.form-container form div.button-container button.btn {
     width: 260px;
     height: 40px;
-    background-color: var(--celeste);
+    background-color: #0022AA;
     color: white;
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.5);
     margin: 20px 0 30px;
 }
 
-button.btn:hover {
-    transform: scale(1.01);
+body div.form-container form div.button-container button.btn:hover {
+    transform: scale(1.1);
+    color: var(--amarillo);
 }
 
 @media (min-width: 768px) {

@@ -14,7 +14,7 @@
      margin: 50px auto;
      border: 1px solid black;
      height: 800px;
-     width: 310px;
+     width: 90vw;
      border-radius: 10px;
      background-color: var(--amarillo);
      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -64,17 +64,18 @@
 
  .divs-contenedores button.btn {
      height: 30px;
-     margin: 0px 7px;
+     margin: 0px 7px 30px;
      border: 0px;
      border-radius: 5px;
      font-size: 15px;
-     background-color: var(--celeste);
+     background-color: #0022AA;
      color: white;
      box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.5);
  }
 
  .divs-contenedores button.btn:hover {
-     transform: scale(1.01);
+    transform: scale(1.1);
+    color: var(--amarillo);
  }
 
  div.divs-contenedores span {

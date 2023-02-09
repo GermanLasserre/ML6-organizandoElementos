@@ -96,7 +96,6 @@ header nav.listas {
     align-items: center;
 }
 
-
 header nav ul li a {
     font-size: var(--parrafos);
 }
@@ -111,12 +110,10 @@ header div.burger-menu {
     margin: 25px auto 0;
 }
 
-
-
 /* Productos */
 
 main.home__productos {
-    width: 95vw;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -128,22 +125,34 @@ main section.hseccion__productos {
 }
 
 main section h4.seccion__productos--titulo {
+    width: 100%;
     text-align: center;
-    margin: 15px 0px 5px 0px;
+    margin-bottom: 5px;
     font-size: 1rem;
     text-decoration: underline;
+    background-color: var(--amarillo);
+    padding: 5px;
 }
 
 main section article.seccion__productos--tarjeta {
-    width: 80%;
     margin-bottom: 10px;
     background-color: white;
     position: relative;
 }
 
-main section article .seccion__productos--tarjeta-descripcion {
+main section article.seccion__productos--tarjeta:hover {
+    box-shadow: -5px 5px 10px var(--gris-oscuro);
+    border: 2px solid black;
+}
+
+.seccion__productos--tarjeta-descripcion {
     border-top: 1px solid var(--gris-claro);
     padding: 15px;
+    display: none;    
+}
+
+.seccion__productos--tarjeta-descripcion:hover {
+    display: block;
 }
 
 main section article i.fa-truck {
@@ -159,6 +168,11 @@ main section article i.fa-truck {
     color: var(--verde);
     background-color: #FFF;
     border-radius: 50%;
+}
+
+main section article i.fa-truck:hover {
+    transform: rotateZ(-360deg) scale(1.1);
+    transition: all 1.5s ease;
 }
 
 .precioYdescuento {
@@ -181,7 +195,6 @@ p.off {
 footer {
     padding: 50px 10px 10px;
     background-color: white;
-    width: 100%;
 }
 
 footer article {
@@ -195,10 +208,17 @@ footer article i {
     margin-bottom: 10px;
 }
 
-footer span {
-    font-size: var(--parrafos);
+footer article i:hover {
+    color: var(--verde);
+    transform: rotateY(-360deg) scale(1.2);
+    transition: all 1.5s ease;
 }
 
+footer span {
+    display: flex;
+    justify-content: end;
+    font-size: var(--parrafos);
+}
 
 /*MOBILE*/
 
@@ -214,17 +234,12 @@ footer span {
 
     .listaInferior {
         display: none;
-    }
-
-    main section article .seccion__productos--tarjeta-descripcion {
-        display: none;
-    }
+    }    
 }
 
 /*TABLET*/
 
 @media(min-width:360px) and (max-width:768px) {
-
 
     header div.logo img {
         min-width: 71%;
@@ -278,15 +293,13 @@ footer span {
     }
 
     main section article.seccion__productos--tarjeta {
-        box-shadow: -5px 5px 10px var(--gris-oscuro);
-        max-width: 50%;
-        margin-bottom: 15px;
+        max-width: 45%;
+        margin: 0px 5px 15px 5px;
         flex-direction: row;
     }
 
-    .smain section article .seccion__productos--tarjeta-descripcion {
-        display: block;
-        border-top: 3px solid var(--gris-claro);
+    main section article.seccion__productos--tarjeta-descripcion {
+        border-top: 2px solid var(--gris-claro);
     }
 }
 
@@ -326,9 +339,12 @@ footer span {
     }
 
     main section article.seccion__productos--tarjeta {
-        box-shadow: -5px 5px 10px var(--gris-oscuro);
         max-width: 25%;
-        margin-bottom: 15px;
         flex-direction: row;
+        border: 0.3rem solid var(--gris-claro);
+    }
+
+    main section article.seccion__productos--tarjeta-descripcion {
+        border-top: 3px solid var(--gris-claro);
     }
 }
