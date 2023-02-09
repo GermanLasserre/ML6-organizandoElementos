@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: auto;
 }
 
 header div.logo img {
@@ -79,6 +79,10 @@ header div.busqueda {
 
 .cuotas {
     font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 header section button {
@@ -145,14 +149,10 @@ main section article.seccion__productos--tarjeta:hover {
     border: 2px solid black;
 }
 
-.seccion__productos--tarjeta-descripcion {
+div.seccion__productos--tarjeta-descripcion {
     border-top: 1px solid var(--gris-claro);
     padding: 15px;
-    display: none;    
-}
-
-.seccion__productos--tarjeta-descripcion:hover {
-    display: block;
+    display: none; 
 }
 
 main section article i.fa-truck {
@@ -195,15 +195,29 @@ p.off {
 footer {
     padding: 50px 10px 10px;
     background-color: white;
+    color: var(--gris-oscuro)
 }
 
-footer article {
+footer section {
+    width: 90%;
+    margin:0px auto;
+}
+
+footer section article {
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer section article p {
+    font-size: var(--parrafos);
     text-align: center;
-    margin-bottom: 50px;
 }
 
-footer article i {
-    font-size: 2em;
+footer section article i {
+    font-size:  2em;
     color: var(--celeste);
     margin-bottom: 10px;
 }
@@ -218,6 +232,7 @@ footer span {
     display: flex;
     justify-content: end;
     font-size: var(--parrafos);
+    padding: 0px 0px 10px 5px;
 }
 
 /*MOBILE*/
@@ -225,16 +240,13 @@ footer span {
 @media (max-width:359px) {
 
     header div.logo img {
-        min-width: 70%;
+        min-width: 50vw;
+        margin: auto;
     }
 
-    .listaSuperior {
+    .listas{
         display: none;
     }
-
-    .listaInferior {
-        display: none;
-    }    
 }
 
 /*TABLET*/
@@ -244,19 +256,29 @@ footer span {
     header div.logo img {
         min-width: 71%;
         max-width: 80%;
+    }   
+
+    .upheader{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     }
 
-    header nav.listas {
+    .listas {
         display: flex;
-        justify-content: space-evenly;
+        text-align: center;
+        justify-content: space-between;
     }
 
     .listaSuperior {
         display: flex;
+        padding-left: 10px;
     }
 
     .listaInferior {
         display: flex;
+        padding-right: 10px;
     }
 
     header nav ul li a {
@@ -281,12 +303,6 @@ footer span {
         font-size: 10px;
     }
 
-    .listas {
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-    }
-
     main section h4.seccion__productos--titulo {
         width: 100%;
         font-size: 1.5rem;
@@ -306,6 +322,13 @@ footer span {
 /* DESKTOP */
 
 @media (min-width:769px) {
+
+    .upheader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
 
     header div.logo img {
         min-width: 81%;
@@ -341,10 +364,14 @@ footer span {
     main section article.seccion__productos--tarjeta {
         max-width: 25%;
         flex-direction: row;
-        border: 0.3rem solid var(--gris-claro);
+        border: 0.25rem solid var(--gris-claro);
     }
 
-    main section article.seccion__productos--tarjeta-descripcion {
+   main section article.seccion__productos--tarjeta-descripcion {
         border-top: 3px solid var(--gris-claro);
+    }
+
+    footer section {
+        display: flex;
     }
 }
